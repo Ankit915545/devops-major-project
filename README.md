@@ -15,3 +15,6 @@ container management, port mapping, and Git fundamentals.
 docker build -t devops-major-project:v1 .
 docker build -t devops-major-project:v2 .
 docker build -t devops-major-project:v3 .
+
+## Git Workflow Practice
+This section documents my Git workflow.
