@@ -1,20 +1,42 @@
 # DevOps Major Project
 
-## Purpose
-This project demonstrates a simple HTML web application served by Nginx
-and containerized using Docker. It covers Docker image versioning,
-container management, port mapping, and Git fundamentals.
+## Project Overview
+   This project demonstrates how to package and serve a static HTML website using Docker and Nginx.
+   Version V4 contains the updated project title, version information, author name, and an explanation 
+   of Docker and Nginx.
 
-## Project Details
-- Author: Ankit Kumar
-- Version: v1, v2, v3
-- Technologies: HTML, Docker, Nginx, Git
+## Dockerfile explanation
+   The Dockerfile defines how the application image is built. It uses an Nginx base image and copies the website's HTML    file into Nginx's web root directory so the page can be served over HTTP.
 
-## Build Docker Images
-```bash
-docker build -t devops-major-project:v1 .
-docker build -t devops-major-project:v2 .
-docker build -t devops-major-project:v3 .
+## Image build command
+   
+   docker build -t devops-major-project:v4 .
 
-## Git Workflow Practice
-This section documents my Git workflow.
+## Container run command
+   
+   docker run -d --name devops-web-v4-test -p 8087:80 devops-major-project:v4
+
+## Application Verification commands
+
+  ## Check the HTTP response:
+
+      curl -I http://localhost:8087
+
+  ## Display the HTML page:
+
+      curl http://localhost:8087
+
+  ## Check the running container:
+
+      docker ps
+
+## Troubleshooting Commands
+ 
+   docker logs devops-web-v4-test
+   docker inspect devops-web-v4-test
+   docker port devops-web-v4-test
+
+
+
+
+
